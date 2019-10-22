@@ -1,0 +1,296 @@
+#container {
+    overflow: hidden;
+    .landingPageContainer {
+        width: 100vw;
+        height: 100vh;
+        background: url(https://images.pexels.com/photos/28080/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        @media @phone {
+            width: 100vw;
+            height: 100vh;
+            background: url(https://images.unsplash.com/photo-1470468969717-61d5d54fd036?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=683&q=80) no-repeat center center; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .hamburger {
+            padding: 35px;
+            display: none;
+
+            img {
+                width: 60px;
+
+                @media @phone {
+                    width: 45px;
+                }
+            }
+
+            @media @tablet {
+                display: block;
+                position: fixed;
+            }
+        }
+
+        .landingPageNavBar {
+            .flexBox(row, space-between, center);
+            width: 100%;
+            padding-top: 35px;
+            mix-blend-mode: hard-light;
+
+            @media @tablet {
+                .flexBox(row, center, center);
+                mix-blend-mode: normal;
+            }
+
+            @media @phone {
+                .flexBox(row, flex-end, center);
+                padding: 30px 20px;
+            }
+
+            .empty {
+                width: 25%;
+
+                @media @tablet {
+                    display: none;
+                }
+            }
+        
+            .navigationBar {
+                .flexBox(row, space-between, baseline);
+                width: 50%;
+                
+
+                @media @tablet {
+                    display: none;
+                }
+
+                a {
+                    .font(4.2rem, @primaryColor, bold);
+                    text-decoration: none;
+
+                    @media @smallDesktop {
+                        font-size: 3.0rem;
+                    }
+                }
+            }
+
+            .logo {
+                .flexBox(row, flex-end, flex-end);
+                width: 25%;
+                
+
+                @media @tablet {
+                    width: 50%;
+                }
+
+                @media @phone {
+                    width: 25%;
+                }
+
+                figure {
+                    margin: 0 auto;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .landingPageContent {
+            .flexBox(column, space-evenly, center);
+            height: calc(100% - 153px);
+
+            @media @phone {
+                height: calc(100% - 110px);
+            }
+            
+        
+            .phone img {
+                -webkit-filter: drop-shadow(-60px 35px 40px rgba(0, 0, 0, 0.8));
+
+                @media @tablet {
+                    width: 200px;
+                }
+
+                @media @phone {
+                    display: none;
+                }
+            }
+        
+            h1 {
+                .font(5.2rem, @primaryColor, bold);
+                text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+                
+                @media @largeDesktop {
+                    padding-top: 50px;
+                }
+
+                @media @smallDesktop {
+                    padding-top: 50px;
+                }
+
+                @media @tablet {
+                    font-size: 4.8rem;
+                }
+
+                @media @phone {
+                    padding-top: 330px;
+                }
+            }
+        
+            .arrowButton img {
+                width: 100px;
+                -webkit-filter: drop-shadow(-2px 2px 3px rgba(0, 0, 0, 0.75));
+
+                @media @smallDesktop {
+                    width: 80px;
+                }
+            }
+        }
+    }
+
+    .productDescriptionPage {
+        width: 100vw;
+        height: 100vh;
+        background: url("https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80") no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        .flexBox(column, space-evenly, center);
+
+        @media @phone {
+            width: 100vw;
+            height: 100vh;
+            background: url("https://images.pexels.com/photos/2149771/pexels-photo-2149771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center center; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        h2 {
+            .font(5.2rem, @secondaryColor, normal);
+            text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.75);
+            height: 25%;
+        }
+
+        h2:nth-child(1) {
+            padding: 100px 0 350px;
+
+            @media @tablet {
+                padding: 100px 0 200px;
+            }
+
+            @media @phone {
+                padding: 75px 0 300px;
+            }
+        }
+
+        h2:nth-child(2) {
+            padding-right: 950px;
+
+            @media @smallDesktop {
+                padding-right: 800px;
+            }
+
+            @media @tablet {
+                padding-right: 300px;
+            }
+
+            @media @phone {
+                padding-right: 150px;
+            }
+        }
+
+        h2:nth-child(3) {
+            padding: 100px 0 0 550px;
+
+            @media @tablet {
+                padding: 130px 0 0 320px;
+            }
+
+            @media @phone {
+                padding: 45px 0 15px 150px;
+            }
+        }
+
+        .arrowButton img {
+            width: 100px;
+            padding-bottom: 50px;
+            -webkit-filter: drop-shadow(-2px 2px 3px rgba(0, 0, 0, 0.75));
+
+            @media @smallDesktop {
+                width: 80px;
+            }
+        }
+    }
+
+    .signUpPage {
+        width: 100vw;
+        height: 100vh;
+        background: url("https://images.pexels.com/photos/38630/bodybuilder-weight-training-stress-38630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        .flexBox(column, flex-end, center);
+        padding-bottom: 50px;
+
+        @media @phone {
+            width: 100vw;
+            height: 100vh;
+            background: url("https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80") no-repeat center center; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .signUpBox {
+            background: rgba(196, 196, 196, 0.3);
+            border: 10px solid #BFCBD7;
+            box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            width: 80%;
+            height: 50%;
+            .flexBox(column, space-evenly, center);
+
+            h2 {
+                .font(5.6rem, @secondaryColor, normal);
+            }
+
+            .signUpTextBox {
+                background: rgba(239, 244, 248, 0.1);
+                border: 5px solid #BFCBD7;
+                width: 70%;
+                height: 15%;
+                .font(3.2rem, @secondaryColor, normal);
+                .flexBox(row, flex-start, center);
+
+                p {
+                    padding-left: 10px;
+                }
+            }
+
+            .signUpButton {
+                background: #323F58;
+                border: 3px solid #BFCBD7;
+                border-radius: 5px;
+                width: 40%;
+                height: 15%;
+                .font(2.8rem, @secondaryColor, normal);
+                .flexBox(row, center, center);
+                text-align: center;
+            }
+        }
+    }
+}
