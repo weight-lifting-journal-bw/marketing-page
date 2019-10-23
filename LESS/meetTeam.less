@@ -12,6 +12,10 @@ body {
         object-fit: cover;
         filter: grayscale(0.6);
         position: fixed;
+
+        @media @phone {
+            display: none;
+        }
     }
     
     main{
@@ -25,6 +29,12 @@ body {
             padding-top: 15%;
         }
 
+        @media @phone {
+           padding-top: 25%;
+           width: 100%;
+           margin: 0pc auto;
+        }
+
             h1{
                 color: @primaryColor;
                 font-size: 5rem;
@@ -34,20 +44,26 @@ body {
                 .position(absolute, "", "", "", "");
                 .flexBox("", space-evenly, center);
                 flex-wrap: wrap;
-                width: 100%;
+                width: 75%;
+                height: 400px;
 
                 @media @tablet {
-                    padding-right: 30%; 
+                    width: 80%;
                 }
+
+                @media @phone {
+                    width: 80%;
+                    margin: 0px 10%;
+                 }
 
                 .profile {
                     height: 100%;
-                    width: calc(30% - 50px);
+                    width: calc(40% - 100px);
                     max-width: 500px;
                     min-width: 400px;
 
                     @media @tablet {
-                        width: calc(50% - 100px);
+                        width: calc(30% - 100px);
                     }
 
                     &:hover{
@@ -67,24 +83,36 @@ body {
                         opacity: 0.7;
                         padding: 6%;
                         text-align: center;
-                        margin: 10.2%;
+                        margin: 10% auto;
                         visibility: hidden;
 
             
                         h3 {
                             font-size: 2.8rem;
                             margin: 5% 5% 0 5%;
+
+                            @media @phone{
+                                font-size: 5.5rem;
+                            }
                         }
             
                         h4{
                             font-size: 1.6rem;
                             margin: 5%;
+
+                            @media @phone{
+                                font-size: 4rem;
+                            }
                         }
             
                         p {
                             line-height: 1.8;
                             font-size: 1.3rem;
                             text-align: left;
+
+                            @media @phone{
+                                font-size: 3rem;
+                            }
                         }
             
                         .fa {
@@ -95,6 +123,10 @@ body {
                             &:hover {
                                 .animation(pulseText, 1.5s, infinite);
                                 }
+
+                            @media @phone{
+                                font-size: 6rem;
+                             }
                         }
                     }
 
@@ -104,7 +136,7 @@ body {
                         max-height: 300px;
                         max-width: 400px;
                         border: 20px solid @primaryColor;
-                        margin: 10%;
+                        margin: 10% auto;
                         object-fit: cover;
                     }
 

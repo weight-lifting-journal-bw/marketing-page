@@ -185,7 +185,7 @@ header .burgerBtn {
   right: "";
   bottom: "";
   left: 0px;
-  margin: 20px;
+  margin: 5% 5%;
   color: #323F58;
   background-color: transparent;
   border: none;
@@ -193,7 +193,7 @@ header .burgerBtn {
 @media (max-width: 1000px) {
   header .burgerBtn {
     visibility: visible;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 @media (max-width: 500px) {
@@ -217,8 +217,8 @@ header nav {
 }
 header nav a {
   text-decoration: none;
-  color: #E1EBF6;
-  font-size: 2rem;
+  color: #323F58;
+  font-size: 2.5rem;
 }
 header nav a:hover {
   animation-name: pulseText;
@@ -265,17 +265,36 @@ header nav a:hover {
   flex-direction: column;
   font-size: 1rem;
   position: absolute;
-  top: 55px;
+  top: 58px;
   right: "";
   bottom: "";
   left: 0px;
   text-align: left;
   line-height: 2;
-  padding: 15px 25px;
+  padding: 20px 25px;
   background-color: #E1EBF6;
   opacity: 0.8;
   z-index: 2;
   position: fixed;
+}
+@media (max-width: 1000px) {
+  .hamburgerMenu {
+    position: absolute;
+    top: 100px;
+    right: "";
+    bottom: "";
+    left: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .hamburgerMenu {
+    background-color: #323F58;
+    position: absolute;
+    top: 50px;
+    right: "";
+    bottom: "";
+    left: 0px;
+  }
 }
 .hamburgerMenu a {
   color: #323F58;
@@ -286,6 +305,11 @@ header nav a:hover {
   animation-name: pulseText;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
+}
+@media (max-width: 500px) {
+  .hamburgerMenu a {
+    color: #E1EBF6;
+  }
 }
 body {
   width: 100vw;
@@ -300,6 +324,11 @@ body .leftImg {
   filter: grayscale(0.6);
   position: fixed;
 }
+@media (max-width: 500px) {
+  body .leftImg {
+    display: none;
+  }
+}
 body main {
   padding: 12% 0 0%;
   height: 100vh;
@@ -310,6 +339,13 @@ body main {
 @media (max-width: 1000px) {
   body main {
     padding-top: 15%;
+  }
+}
+@media (max-width: 500px) {
+  body main {
+    padding-top: 25%;
+    width: 100%;
+    margin: 0pc auto;
   }
 }
 body main h1 {
@@ -328,25 +364,33 @@ body main .portfolioBio {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
+  width: 75%;
+  height: 400px;
 }
 @media (max-width: 1000px) {
   body main .portfolioImg,
   body main .portfolioBio {
-    padding-right: 30%;
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  body main .portfolioImg,
+  body main .portfolioBio {
+    width: 80%;
+    margin: 0px 10%;
   }
 }
 body main .portfolioImg .profile,
 body main .portfolioBio .profile {
   height: 100%;
-  width: calc(30% - 50px);
+  width: calc(40% - 100px);
   max-width: 500px;
   min-width: 400px;
 }
 @media (max-width: 1000px) {
   body main .portfolioImg .profile,
   body main .portfolioBio .profile {
-    width: calc(50% - 100px);
+    width: calc(30% - 100px);
   }
 }
 body main .portfolioImg .profile:hover,
@@ -367,7 +411,7 @@ body main .portfolioBio .profile .overlay {
   opacity: 0.7;
   padding: 6%;
   text-align: center;
-  margin: 10.2%;
+  margin: 10% auto;
   visibility: hidden;
 }
 body main .portfolioImg .profile .overlay h3,
@@ -375,16 +419,34 @@ body main .portfolioBio .profile .overlay h3 {
   font-size: 2.8rem;
   margin: 5% 5% 0 5%;
 }
+@media (max-width: 500px) {
+  body main .portfolioImg .profile .overlay h3,
+  body main .portfolioBio .profile .overlay h3 {
+    font-size: 5.5rem;
+  }
+}
 body main .portfolioImg .profile .overlay h4,
 body main .portfolioBio .profile .overlay h4 {
   font-size: 1.6rem;
   margin: 5%;
+}
+@media (max-width: 500px) {
+  body main .portfolioImg .profile .overlay h4,
+  body main .portfolioBio .profile .overlay h4 {
+    font-size: 4rem;
+  }
 }
 body main .portfolioImg .profile .overlay p,
 body main .portfolioBio .profile .overlay p {
   line-height: 1.8;
   font-size: 1.3rem;
   text-align: left;
+}
+@media (max-width: 500px) {
+  body main .portfolioImg .profile .overlay p,
+  body main .portfolioBio .profile .overlay p {
+    font-size: 3rem;
+  }
 }
 body main .portfolioImg .profile .overlay .fa,
 body main .portfolioBio .profile .overlay .fa {
@@ -398,6 +460,12 @@ body main .portfolioBio .profile .overlay .fa:hover {
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
+@media (max-width: 500px) {
+  body main .portfolioImg .profile .overlay .fa,
+  body main .portfolioBio .profile .overlay .fa {
+    font-size: 6rem;
+  }
+}
 body main .portfolioImg .profile .profileImg,
 body main .portfolioBio .profile .profileImg {
   height: 80%;
@@ -405,6 +473,6 @@ body main .portfolioBio .profile .profileImg {
   max-height: 300px;
   max-width: 400px;
   border: 20px solid #323F58;
-  margin: 10%;
+  margin: 10% auto;
   object-fit: cover;
 }
