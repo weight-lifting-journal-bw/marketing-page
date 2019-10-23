@@ -5,7 +5,6 @@ body {
 
     header{
         width: 100%;
-        height: 10%;
         background-color: #E1EBF6;
         position: fixed;
         top: 0px;
@@ -55,12 +54,31 @@ body {
                 font-size: 2rem;
 
                 @media @tablet {
-                    color: #E1EBF6;
-
-                }
+                    display: none;
             }
+            }
+            
+        }
 
+    }
+     .logoHeader {
+        height: 80%;
+        width: auto;
+        position: absolute;
+        top: 8px;
+        right:8px;
+    
             @media @tablet {
+            height: 70%;
+            position: absolute;
+            left: 45%;
+                }
+     }
+
+
+     .hamburgerMenu {
+                width: auto;
+                display: flex;
                 flex-direction: column;
                 font-size: 1rem;
                 position: absolute;
@@ -71,23 +89,19 @@ body {
                 padding: 15px 25px;
                 background-color: #323F58;
                 opacity: 0.8;
-                width: auto;
-            }
+                z-index: 2;
+                overflow: hidden;
+
+        
+            a{ 
+                color: #E1EBF6;
+                text-decoration: none;
+                font-size: 2rem;
+
+                }
         }
 
-        .logoHeader {
-            height: 80%;
-            width: auto;
-            position: absolute;
-            top: 8px;
-            right:8px;
 
-            @media @tablet {
-            height: 70%;
-            position: relative;
-            }
-        }
-    }
 
     main{
         padding: 10% 0 0%;
@@ -208,5 +222,6 @@ body {
             }
         }
         
-    }
-}
+    } //main
+
+} //body

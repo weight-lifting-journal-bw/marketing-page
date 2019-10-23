@@ -145,7 +145,6 @@ body {
 }
 body header {
   width: 100%;
-  height: 10%;
   background-color: #E1EBF6;
   position: fixed;
   top: 0px;
@@ -194,25 +193,10 @@ body header nav a {
 }
 @media (max-width: 1000px) {
   body header nav a {
-    color: #E1EBF6;
+    display: none;
   }
 }
-@media (max-width: 1000px) {
-  body header nav {
-    flex-direction: column;
-    font-size: 1rem;
-    position: absolute;
-    top: 38px;
-    left: 55px;
-    text-align: left;
-    line-height: 2;
-    padding: 15px 25px;
-    background-color: #323F58;
-    opacity: 0.8;
-    width: auto;
-  }
-}
-body header .logoHeader {
+body .logoHeader {
   height: 80%;
   width: auto;
   position: absolute;
@@ -220,10 +204,32 @@ body header .logoHeader {
   right: 8px;
 }
 @media (max-width: 1000px) {
-  body header .logoHeader {
+  body .logoHeader {
     height: 70%;
-    position: relative;
+    position: absolute;
+    left: 45%;
   }
+}
+body .hamburgerMenu {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  position: absolute;
+  top: 38px;
+  left: 55px;
+  text-align: left;
+  line-height: 2;
+  padding: 15px 25px;
+  background-color: #323F58;
+  opacity: 0.8;
+  z-index: 2;
+  overflow: hidden;
+}
+body .hamburgerMenu a {
+  color: #E1EBF6;
+  text-decoration: none;
+  font-size: 2rem;
 }
 body main {
   padding: 10% 0 0%;

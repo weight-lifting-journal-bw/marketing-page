@@ -1,8 +1,10 @@
 
-$(document).ready(function(){
-    if ($("nav").width() < 1000) {
-        $("button").click(function(){
-        $("nav").toggle("slow");
-    }); 
-    }
-});
+
+let hamburger = document.querySelector(".burgerBtn");
+let menu = document.querySelector(".hamburgerMenu");
+
+hamburger.addEventlistener('click', openMenu)
+
+function openMenu () {
+        menu.style.left="200px";
+}
