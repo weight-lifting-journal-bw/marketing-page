@@ -212,7 +212,7 @@ body .logoHeader {
 }
 body .hamburgerMenu {
   width: auto;
-  display: flex;
+  display: none;
   flex-direction: column;
   font-size: 1rem;
   position: absolute;
@@ -225,7 +225,7 @@ body .hamburgerMenu {
   opacity: 0.8;
   z-index: 2;
   overflow: hidden;
-  visibility: hidden;
+  position: fixed;
 }
 body .hamburgerMenu a {
   color: #E1EBF6;
@@ -347,4 +347,7 @@ body main .portfolioBio .profile .profileImg {
   border: 20px solid #323F58;
   margin: 10%;
   object-fit: cover;
+}
+.visible {
+  display: flex;
 }

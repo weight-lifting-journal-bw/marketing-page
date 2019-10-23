@@ -3,8 +3,12 @@
 let hamburger = document.querySelector(".burgerBtn");
 let menu = document.querySelector(".hamburgerMenu");
 
-hamburger.addEventlistener('click', openMenu);
+hamburger.addEventListener('click', openMenu);
 
 function openMenu () {
-        menu.style.visibility="visibile";
+    if (menu.style.display === "none"){
+        menu.style.display = "flex";
+    } else {
+        menu.style.display = "none";
+    }
 }
