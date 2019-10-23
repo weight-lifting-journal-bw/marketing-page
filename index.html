@@ -6,55 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.google.com/specimen/Roboto?selection.family=Open+Sans|Roboto:400,500" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script defer src="JS/hamburger.js"></script>
   <title>Spotter</title>
 </head>
 
 <body>
   <div id="container">
-    <!--     <header>
-      <div class="hamburger">
-        <figure>
-          <img src="images/hamburger.png">
-        </figure>
-      </div>
-      <nav class="navigationBar">
-        <a href="#">Home</a>
-        <a href="#">Programs</a>
-        <a href="#">About</a>
-        <a href="#">Sign In</a>
-      </nav>
-
-      <div class="logo">
-        <figure>
-          <img src="images/logo.png" alt="Spotter Logo">
-        </figure>
-      </div>
-    </header> -->
-
     <main>
       <div class="landingPageContainer">
-          <div class="hamburger">
-              <figure>
-                <img src="images/hamburger.png">
-              </figure>
-            </div>
+        <div class="burgerBtn"><i class="fa fa-bars"></i></div>
         <div class="landingPageNavBar">
-          <div class="empty">
-
-          </div>
+          <div class="empty"></div>
           <nav class="navigationBar">
             <a href="#">Home</a>
             <a href="#">Programs</a>
-            <a href="#">About</a>
+            <a href="about.html">About Us</a>
             <a href="#">Sign In</a>
           </nav>
-
-          <div class="logo">
-            <figure>
-              <img src="images/logo.png" alt="Spotter Logo">
-            </figure>
-          </div>
+          <figure class="logo">
+            <img src="images/logo.png" alt="Spotter Logo">
+          </figure>
+        </div>
+        <div class="hamburgerMenu">
+          <a href="#">Home</a>
+          <a href="#">Programs</a>
+          <a href="about.html">About Us</a>
+          <a href="#">Sign In</a>
         </div>
         <section class="landingPageContent">
           <figure class="phone">
@@ -64,33 +42,39 @@
           <h1>Workouts made easy</h1>
 
           <figure class="arrowButton">
-            <img src="images/arrow.png" alt="Click to scroll down">
+            <a href="#productFillPage"><img src="images/arrow.png" alt="Click to scroll down"></a>
           </figure>
         </section>
       </div>
-      <section class="productDescriptionPage">
+      <section id="productFillPage">
         <h2 id="create">Create routine.</h2>
         <h2 id="save">Click save.</h2>
         <h2 id="forever">Use forever.</h2>
 
         <figure class="arrowButton">
-          <img src="images/arrow.png" alt="Click to scroll down">
+          <a href="#productDescriptionPage"><img src="images/arrow.png" alt="Click to scroll down"></a>
         </figure>
       </section>
-      <section class="signUpPage">
-        <div class="signUpBox">
-          <h2>Sign up</h2>
+      <section id="productDescriptionPage">
+        <div class="descriptionBox">
+          <h2>What is Spotter?</h2>
 
-          <div class="signUpTextBox">
-            <p>Email: </p>
-          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim, leo at viverra faucibus, velit
+            justo suscipit ipsum, ac fringilla ligula ipsum eu nibh. Vivamus pretium libero nisl, in dapibus leo
+            tristique vel. Morbi vitae ex a quam molestie viverra. Etiam tortor mauris, pellentesque eu nisi vel,
+            hendrerit venenatis tortor. Mauris pellentesque dui libero, at maximus mauris cursus vel. Cras nec ipsum
+            lacinia, fringilla magna quis, ultricies sem. Nam id suscipit nulla, nec eleifend dui. Pellentesque vel
+            ultricies lorem. Aliquam porttitor velit non bibendum molestie. Proin urna justo, lacinia sit amet
+            condimentum vitae, elementum vitae nunc. Sed vehicula ullamcorper odio, sit amet placerat ligula dictum et.
+            Phasellus dapibus dignissim massa at posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            Proin sit amet eleifend massa. Nulla dapibus enim nec libero egestas, in sollicitudin risus rhoncus. Nunc
+            nec enim massa.</p>
 
-          <div class="signUpTextBox">
-            <p>Password: </p>
-          </div>
 
           <div class="signUpButton">
-            <p>Commit to be fit!</p>
+            <a href="#">
+              <p>Sign Up!</p>
+            </a>
           </div>
         </div>
       </section>

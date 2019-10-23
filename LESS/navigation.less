@@ -1,0 +1,166 @@
+
+    .landingPageContainer {
+        width: 100vw;
+        height: 100vh;
+        background: url(https://images.pexels.com/photos/28080/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center;
+        background-size: cover;
+        scroll-snap-align: center;
+
+        @media @phone {
+            background: url(https://images.unsplash.com/photo-1470468969717-61d5d54fd036?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=683&q=80) no-repeat center center; 
+            background-size: cover;
+        }
+
+        .hamburgerMenu {
+            width: auto;
+            display: none;
+            flex-direction: column;
+            font-size: 1rem;
+            position: absolute;
+            top: 38px;
+            left: 55px;
+            text-align: left;
+            line-height: 2;
+            padding: 15px 25px;
+            background-color: @primaryColor;
+            opacity: 0.8;
+            z-index: 2;
+            position: fixed;
+
+    
+            a { 
+            color: @lightGrey;
+            text-decoration: none;
+            font-size: 2rem;
+
+            &:hover {
+                .animation(pulseText, 1.5s, infinite);
+            }
+            }
+        }
+
+        .burgerBtn {
+            visibility: hidden;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin: 20px;
+            color: @primaryColor;
+            background-color: transparent;
+            font-size: 3rem;
+
+            @media @tablet {
+                visibility: visible;
+            }
+
+            @media @phone {
+                font-size: 5.4rem;
+            }
+
+            &:hover {
+                color: lighten(@primaryColor, 40%);
+            }
+
+            &:active {
+                color: lighten(@primaryColor, 40%);
+            }
+
+        }
+
+        .landingPageNavBar {
+            .flexBox(row, space-between, center);
+            width: 100%;
+            height: 20%;
+            padding-top: 35px;
+            mix-blend-mode: hard-light;
+
+            @media @tablet {
+                .flexBox(row, center, center);
+                mix-blend-mode: normal;
+            }
+
+            @media @phone {
+                .flexBox(row, flex-end, center);
+                padding: 25px;
+            }
+
+            .empty {
+                width: 25%;
+
+                @media @tablet {
+                    display: none;
+                }
+            }
+        
+            .navigationBar {
+                .flexBox(row, space-between, baseline);
+                width: 50%;
+
+                @media @tablet {
+                    display: none;
+                }
+
+                a {
+                    .font(4.2rem, @primaryColor, bold);
+
+                    @media @smallDesktop {
+                        font-size: 3.0rem;
+                    }
+
+                    &:hover {
+                        .animation(pulseText, 1.5s, infinite);
+                    }
+                }
+            }
+
+            .logo {
+                .flexBox(row, flex-end, flex-end);
+                width: 25%;
+
+                img {
+                    margin: 0 auto;
+                    max-width: 85%;
+                    max-height: 85%;
+                    filter: drop-shadow(-3px 3px 10px rgba(253, 253, 253, 0.3));
+                }
+            }
+        }
+
+        .landingPageContent {
+            .flexBox(column, space-between, center);
+            height: 80%;
+            
+            .phone img {
+                width: 225px;
+                filter: drop-shadow(-60px 35px 40px rgba(0, 0, 0, 0.8));
+
+                @media @phone {
+                    display: none;
+                }
+            }
+        
+            h1 {
+                .font(4.7rem, @primaryColor, bold);
+                text-shadow: -3px 3px 6px rgba(0, 0, 0, 0.5);
+                position: absolute;
+                top: 75%;
+            }
+        
+            .arrowButton img {
+                filter: @buttonShadow;
+                width: 100px;
+                position: absolute;
+                top: 83%;
+                left: calc(50% - 50px);
+
+                &:hover {
+                    .animation(pulseText, 1.5s, infinite);
+                }
+
+                @media @phone {
+                    width: 80px;
+                    left: calc(50% - 40px);
+                }
+            }
+        }
+    }

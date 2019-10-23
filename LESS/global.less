@@ -4,12 +4,17 @@
   
   html {
     font-size: 62.5%;
+    font-family: "Roboto", "Open Sans";
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
 
     @media @phone {
       font-size: 35%;
     }
   }
-  
-  html, body {
-    font-family: "Roboto", "Open Sans";
+
+  a {
+    text-decoration: none;
   }
