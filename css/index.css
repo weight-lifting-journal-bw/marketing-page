@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -131,17 +138,9 @@ html {
 html,
 body {
   font-family: "Roboto", "Open Sans";
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+  overflow-x: hidden;
 }
 body {
-  font-family: "Roboto";
-  font-weight: 500;
   width: 100vw;
 }
 body header {
@@ -153,9 +152,38 @@ body header {
   left: 0px;
   z-index: 1;
 }
+@media (max-width: 1000px) {
+  body header {
+    text-align: center;
+    height: 8%;
+    width: 100%;
+  }
+}
+body header button {
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 20px;
+  color: #323F58;
+  background-color: transparent;
+  border: none;
+}
+@media (max-width: 1000px) {
+  body header button {
+    visibility: visible;
+    font-size: 3rem;
+  }
+}
+body header button:hover {
+  color: #94a4c2;
+}
+body header button:active {
+  color: #94a4c2;
+}
 body header nav {
   width: 50%;
-  margin: 4% auto;
+  margin: 2% auto;
   display: flex;
   justify-content: space-evenly;
 }
@@ -164,84 +192,153 @@ body header nav a {
   color: #323F58;
   font-size: 2rem;
 }
+@media (max-width: 1000px) {
+  body header nav a {
+    color: #E1EBF6;
+  }
+}
+@media (max-width: 1000px) {
+  body header nav {
+    flex-direction: column;
+    font-size: 1rem;
+    position: absolute;
+    top: 38px;
+    left: 55px;
+    text-align: left;
+    line-height: 2;
+    padding: 15px 25px;
+    background-color: #323F58;
+    opacity: 0.8;
+    width: auto;
+  }
+}
 body header .logoHeader {
-  height: 95%;
+  height: 80%;
   width: auto;
   position: absolute;
   top: 8px;
   right: 8px;
 }
+@media (max-width: 1000px) {
+  body header .logoHeader {
+    height: 70%;
+    position: relative;
+  }
+}
 body main {
-  padding-top: 13%;
-  background-image: url("Images/dumbbells.jpeg");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  padding: 10% 0 0%;
+  height: 100vh;
+  width: 90%;
+}
+@media (max-width: 800px) {
+  body main {
+    height: 210vh;
+  }
+}
+@media (max-width: 1000px) {
+  body main {
+    padding-top: 20%;
+    width: 100%;
+  }
+}
+body main .container {
+  height: inherit;
+  background-size: cover;
+}
+body main .container .backgroundImg {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  width: 100%;
+  max-height: 1500px;
+  object-fit: cover;
+}
+@media (max-width: 1500px) {
+  body main .container .backgroundImg {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 1100px;
+    z-index: -1;
+  }
 }
 body main h1 {
   color: #323F58;
   text-align: center;
   font-size: 5rem;
 }
-body main .portfolios {
+body main .portfolioImg,
+body main .portfolioBio {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  position: absolute;
+  width: 100%;
 }
-body main .portfolios .profile {
+body main .portfolioImg .profile,
+body main .portfolioBio .profile {
   height: 10%;
-  width: calc(40% - 10px);
-  max-width: 500px;
+  width: calc(45% - 100px);
+  max-width: 600px;
+  min-width: 400px;
 }
-body main .portfolios .profile .profileImg {
-  height: 90%;
-  width: 90%;
-  max-height: 400px;
-  max-width: 400px;
-  border: 20px solid #323F58;
-  margin: 10%;
-  object-fit: cover;
+@media (max-width: 1000px) {
+  body main .portfolioImg .profile,
+  body main .portfolioBio .profile {
+    width: calc(50% - 100px);
+  }
 }
-body main .portfolios .profile .profileImg:hover {
+body main .portfolioImg .profile:hover,
+body main .portfolioBio .profile:hover {
   filter: grayscale(100%);
 }
-body main .portfolios .profile .overlay {
-  display: none;
-  height: 35vh;
-  max-width: 20vw;
+body main .portfolioImg .profile:hover .overlay,
+body main .portfolioBio .profile:hover .overlay {
+  visibility: visible;
+}
+body main .portfolioImg .profile .overlay,
+body main .portfolioBio .profile .overlay {
+  height: 80%;
+  width: 90%;
+  max-height: 300px;
+  max-width: 400px;
   background-color: #C4C4C4;
+  border: 20px solid transparent;
   opacity: 0.7;
-  padding: 30px;
-  position: relative;
-  bottom: 480px;
-  left: 80px;
+  padding: 5%;
   text-align: center;
-}
-body main .portfolios .profile .overlay h3 {
-  font-size: 4rem;
-  margin: 20% 10% 0 10%;
-}
-body main .portfolios .profile .overlay h4 {
-  font-size: 2rem;
   margin: 10%;
+  visibility: hidden;
 }
-body main .portfolios .profile .overlay p {
+body main .portfolioImg .profile .overlay h3,
+body main .portfolioBio .profile .overlay h3 {
+  font-size: 2.8rem;
+  margin: 5% 5% 0 5%;
+}
+body main .portfolioImg .profile .overlay h4,
+body main .portfolioBio .profile .overlay h4 {
+  font-size: 1.6rem;
+  margin: 5%;
+}
+body main .portfolioImg .profile .overlay p,
+body main .portfolioBio .profile .overlay p {
   line-height: 1.8;
   font-size: 1.3rem;
   text-align: left;
 }
-body main .portfolios .profile .overlay .fa {
+body main .portfolioImg .profile .overlay .fa,
+body main .portfolioBio .profile .overlay .fa {
   font-size: 3rem;
-  margin: 5%;
+  margin: 2% 10%;
   color: #323F58;
 }
-footer {
-  position: relative;
-  bottom: -1px;
-  width: 100%;
-  height: 15rem;
-  background-color: #E1EBF6;
-  text-align: center;
-}
-footer .logoFooter {
-  margin: 20px auto;
+body main .portfolioImg .profile .profileImg,
+body main .portfolioBio .profile .profileImg {
+  height: 80%;
+  width: 90%;
+  max-height: 300px;
+  max-width: 400px;
+  border: 20px solid #323F58;
+  margin: 10%;
+  object-fit: cover;
 }

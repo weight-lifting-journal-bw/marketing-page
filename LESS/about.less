@@ -1,128 +1,212 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-body{
-    font-family: "Roboto";
-    font-weight: 500;
+body {
     width: 100vw;
-    
 
-header{
-    width: 100%;
-    height: 10%;
-    background-color: #E1EBF6;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
 
-    nav{
-        width: 50%;
-        margin: 4% auto;
-        display: flex;
-        justify-content: space-evenly;
+    header{
+        width: 100%;
+        height: 10%;
+        background-color: #E1EBF6;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
 
-        a {
-            text-decoration: none;
+        @media @tablet {
+            text-align: center;
+            height: 8%;
+            width: 100%;
+        }
+
+        button {
+            visibility: hidden;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin: 20px;
             color: #323F58;
-            font-size: 2rem;
+            background-color: transparent;
+            border: none;
+
+            @media @tablet {
+                visibility: visible;
+                font-size: 3rem;
+            }
+
+            &:hover {
+                color: lighten(#323F58, 40%);
+            }
+
+            &:active {
+                color: lighten(#323F58, 40%);
+            }
+
+        }
+
+        nav{
+            width: 50%;
+            margin: 2% auto;
+            display: flex;
+            justify-content: space-evenly;
+
+            a {
+                text-decoration: none;
+                color: #323F58;
+                font-size: 2rem;
+
+                @media @tablet {
+                    color: #E1EBF6;
+
+                }
+            }
+
+            @media @tablet {
+                flex-direction: column;
+                font-size: 1rem;
+                position: absolute;
+                top: 38px;
+                left: 55px;
+                text-align: left;
+                line-height: 2;
+                padding: 15px 25px;
+                background-color: #323F58;
+                opacity: 0.8;
+                width: auto;
+            }
+        }
+
+        .logoHeader {
+            height: 80%;
+            width: auto;
+            position: absolute;
+            top: 8px;
+            right:8px;
+
+            @media @tablet {
+            height: 70%;
+            position: relative;
+            }
         }
     }
 
-    .logoHeader {
-        height: 95%;
-        width: auto;
-        position: absolute;
-        top: 8px;
-        right:8px;
-    }
-}
+    main{
+        padding: 10% 0 0%;
+        height: 100vh;
+        width: 90%;
 
-main{
-    padding-top: 13%;
-    background-image: url("Images/dumbbells.jpeg");
-    background-repeat: no-repeat;
-    background-size: 100%;
+        @media (max-width:800px) {
+            height: 210vh;
+        }
+        
+        @media @tablet {
+            padding-top: 20%;
+            width: 100%;
+        }
 
-    h1{
-        color:#323F58;
-        text-align: center;
-        font-size: 5rem;
-    }
+        .container {
+            height: inherit;
+            background-size: cover;
 
-    .portfolios {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-
-
-        .profile {
-            height: 10%;
-            width: calc(40% - 10px);
-            max-width: 500px;
-             
-            .profileImg {
-                height: 90%;
-                width: 90%;
-                max-height: 400px;
-                max-width: 400px;
-                border: 20px solid #323F58;
-                margin: 10%;
+            .backgroundImg {
+                position: absolute;
+                z-index: -1;
+                top: 0px;
+                width: 100%;
+                max-height: 1500px;
                 object-fit: cover;
+
+                @media (max-width: 1500px) {
+                    position: fixed;
+                    top: 0px;
+                    left: 0px;
+                    height: 1100px;
+                    z-index: -1;
+                }
+
+            }
+        }
+                    
+
+        h1{
+            color:#323F58;
+            text-align: center;
+            font-size: 5rem;
+        }
+
+        .portfolioImg, .portfolioBio{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            position: absolute;
+            width: 100%;
+
+
+            .profile {
+                height: 10%;
+                width: calc(45% - 100px);
+                max-width: 600px;
+                min-width: 400px;
+
+                @media @tablet {
+                    width: calc(50% - 100px);
+                }
 
                 &:hover{
                     filter: grayscale(100%);
+
+                    .overlay{
+                        visibility: visible;
+                    }
                 }
-            }
-
-            .overlay{
-                display: none;
-                height: 35vh;
-                max-width: 20vw;
-                background-color: #C4C4C4;
-                opacity: 0.7;
-                padding: 30px;
-                position: relative;
-                bottom: 480px;
-                left: 80px;
-                text-align: center;
-
-                h3 {
-                    font-size: 4rem;
-                    margin: 20% 10% 0 10%;
-                }
-
-                h4{
-                    font-size: 2rem;
+                
+                .overlay{
+                    height: 80%;
+                    width: 90%;
+                    max-height: 300px;
+                    max-width: 400px;
+                    background-color: #C4C4C4;
+                    border: 20px solid transparent;
+                    opacity: 0.7;
+                    padding: 5%;
+                    text-align: center;
                     margin: 10%;
+                    visibility: hidden;
+
+        
+                    h3 {
+                        font-size: 2.8rem;
+                        margin: 5% 5% 0 5%;
+                    }
+        
+                    h4{
+                        font-size: 1.6rem;
+                        margin: 5%;
+                    }
+        
+                    p {
+                        line-height: 1.8;
+                        font-size: 1.3rem;
+                        text-align: left;
+                    }
+        
+                    .fa {
+                        font-size: 3rem;
+                        margin: 2% 10%;
+                        color: #323F58;
+                    }
+                }
+                .profileImg {
+                    height: 80%;
+                    width: 90%;
+                    max-height: 300px;
+                    max-width: 400px;
+                    border: 20px solid #323F58;
+                    margin: 10%;
+                    object-fit: cover;
                 }
 
-                p {
-                    line-height: 1.8;
-                    font-size: 1.3rem;
-                    text-align: left;
-                }
-
-                .fa {
-                    font-size: 3rem;
-                    margin: 5%;
-                    color: #323F58;
-                }
             }
         }
-    }
-    
-}
-}
-
-footer {
-    position: relative;
-    bottom: -1px;
-    width: 100%;
-    height: 15rem;
-    background-color: #E1EBF6;
-    text-align: center;
-
-    .logoFooter{
-        margin: 20px auto;
+        
     }
 }
