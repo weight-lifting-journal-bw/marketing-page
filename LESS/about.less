@@ -1,114 +1,11 @@
 
 body {
     width: 100vw;
-
-
-    header{
-        width: 100%;
-        background-color: #E1EBF6;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        z-index: 1;
-
-        @media @tablet {
-            text-align: center;
-            height: 8%;
-            width: 100%;
-        }
-
-        .burgerBtn {
-            visibility: hidden;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            margin: 20px;
-            color: #323F58;
-            background-color: transparent;
-            border: none;
-
-            @media @tablet {
-                visibility: visible;
-                font-size: 3rem;
-            }
-
-            &:hover {
-                color: lighten(#323F58, 40%);
-            }
-
-            &:active {
-                color: lighten(#323F58, 40%);
-            }
-
-        }
-
-        nav{
-            width: 50%;
-            margin: 2% auto;
-            display: flex;
-            justify-content: space-evenly;
-
-            a {
-                text-decoration: none;
-                color: #323F58;
-                font-size: 2rem;
-
-                @media @tablet {
-                    display: none;
-            }
-            }
-            
-        }
-
-    }
-     .logoHeader {
-        height: 80%;
-        width: auto;
-        position: absolute;
-        top: 8px;
-        right:8px;
     
-            @media @tablet {
-            height: 70%;
-            position: absolute;
-            left: 45%;
-                }
-     }
-
-
-     .hamburgerMenu {
-                width: auto;
-                display: none;
-                flex-direction: column;
-                font-size: 1rem;
-                position: absolute;
-                top: 38px;
-                left: 55px;
-                text-align: left;
-                line-height: 2;
-                padding: 15px 25px;
-                background-color: #323F58;
-                opacity: 0.8;
-                z-index: 2;
-                overflow: hidden;
-                position: fixed;
-                // visibility: hidden;
-
-        
-            a{ 
-                color: #E1EBF6;
-                text-decoration: none;
-                font-size: 2rem;
-
-                }
-        }
-
-
-
     main{
         padding: 10% 0 0%;
         height: 100vh;
-        width: 90%;
+        width: 100%;
 
         @media (max-width:800px) {
             height: 210vh;
@@ -144,7 +41,7 @@ body {
                     
 
         h1{
-            color:#323F58;
+            color: @primaryColor;
             text-align: center;
             font-size: 5rem;
         }
@@ -179,7 +76,7 @@ body {
                     height: 300px;
                     width: 90%;
                     max-width: 400px;
-                    background-color: #C4C4C4;
+                    background-color: @lightGrey;
                     border: 20px solid transparent;
                     opacity: 0.7;
                     padding: 6%;
@@ -207,7 +104,7 @@ body {
                     .fa {
                         font-size: 3rem;
                         margin: 2% 10%;
-                        color: #323F58;
+                        color: @primaryColor;
                     }
                 }
                 .profileImg {
@@ -215,7 +112,7 @@ body {
                     width: 90%;
                     max-height: 300px;
                     max-width: 400px;
-                    border: 20px solid #323F58;
+                    border: 20px solid @primaryColor;
                     margin: 10%;
                     object-fit: cover;
                 }
@@ -226,7 +123,3 @@ body {
     } //main
 
 } //body
-
-.visible{
-    display: flex;
-}
