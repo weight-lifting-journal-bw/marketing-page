@@ -169,8 +169,13 @@ header {
 @media (max-width: 1000px) {
   header {
     text-align: center;
-    height: 8%;
+    height: 10%;
     width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    height: 7%;
   }
 }
 header .burgerBtn {
@@ -191,6 +196,11 @@ header .burgerBtn {
     font-size: 3rem;
   }
 }
+@media (max-width: 500px) {
+  header .burgerBtn {
+    font-size: 5rem;
+  }
+}
 header .burgerBtn:hover {
   color: #94a4c2;
 }
@@ -207,7 +217,7 @@ header nav {
 }
 header nav a {
   text-decoration: none;
-  color: #323F58;
+  color: #E1EBF6;
   font-size: 2rem;
 }
 header nav a:hover {
@@ -239,26 +249,36 @@ header nav a:hover {
     left: 45%;
   }
 }
+@media (max-width: 500px) {
+  .logoHeader {
+    height: 80%;
+    position: absolute;
+    top: "";
+    right: "";
+    bottom: "";
+    left: 33%;
+  }
+}
 .hamburgerMenu {
-  width: auto;
+  width: 25%;
   display: none;
   flex-direction: column;
   font-size: 1rem;
   position: absolute;
-  top: 38px;
+  top: 55px;
   right: "";
   bottom: "";
-  left: 55px;
+  left: 0px;
   text-align: left;
   line-height: 2;
   padding: 15px 25px;
-  background-color: #323F58;
+  background-color: #E1EBF6;
   opacity: 0.8;
   z-index: 2;
   position: fixed;
 }
 .hamburgerMenu a {
-  color: #E1EBF6;
+  color: #323F58;
   text-decoration: none;
   font-size: 2rem;
 }
@@ -270,51 +290,30 @@ header nav a:hover {
 body {
   width: 100vw;
 }
-body main {
-  padding: 10% 0 0%;
-  height: 100vh;
-  width: 100%;
+body .leftImg {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.6);
+  position: fixed;
 }
-@media (max-width: 800px) {
-  body main {
-    height: 210vh;
-  }
+body main {
+  padding: 12% 0 0%;
+  height: 100vh;
+  width: 75%;
+  margin-left: 25%;
+  text-align: center;
 }
 @media (max-width: 1000px) {
   body main {
-    padding-top: 20%;
-    width: 100%;
-  }
-}
-body main .container {
-  height: inherit;
-  background-size: cover;
-}
-body main .container .backgroundImg {
-  position: absolute;
-  top: 0px;
-  right: "";
-  bottom: "";
-  left: "";
-  z-index: -1;
-  width: 100%;
-  max-height: 1500px;
-  object-fit: cover;
-}
-@media (max-width: 1500px) {
-  body main .container .backgroundImg {
-    position: fixed;
-    top: 0px;
-    right: "";
-    bottom: "";
-    left: 0px;
-    height: 1100px;
-    z-index: -1;
+    padding-top: 15%;
   }
 }
 body main h1 {
   color: #323F58;
-  text-align: center;
   font-size: 5rem;
 }
 body main .portfolioImg,
@@ -331,11 +330,17 @@ body main .portfolioBio {
   flex-wrap: wrap;
   width: 100%;
 }
+@media (max-width: 1000px) {
+  body main .portfolioImg,
+  body main .portfolioBio {
+    padding-right: 30%;
+  }
+}
 body main .portfolioImg .profile,
 body main .portfolioBio .profile {
   height: 100%;
-  width: calc(45% - 100px);
-  max-width: 600px;
+  width: calc(30% - 50px);
+  max-width: 500px;
   min-width: 400px;
 }
 @media (max-width: 1000px) {

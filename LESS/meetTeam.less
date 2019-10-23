@@ -1,0 +1,116 @@
+
+
+body {
+    width: 100vw;
+
+    .leftImg {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 25%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(0.6);
+        position: fixed;
+    }
+    
+    main{
+        padding: 12% 0 0%;
+        height: 100vh;
+        width: 75%;
+        margin-left: 25%;
+        text-align: center;
+        
+        @media @tablet {
+            padding-top: 15%;
+        }
+
+            h1{
+                color: @primaryColor;
+                font-size: 5rem;
+            }
+
+            .portfolioImg, .portfolioBio{
+                .position(absolute, "", "", "", "");
+                .flexBox("", space-evenly, center);
+                flex-wrap: wrap;
+                width: 100%;
+
+                @media @tablet {
+                    padding-right: 30%; 
+                }
+
+                .profile {
+                    height: 100%;
+                    width: calc(30% - 50px);
+                    max-width: 500px;
+                    min-width: 400px;
+
+                    @media @tablet {
+                        width: calc(50% - 100px);
+                    }
+
+                    &:hover{
+                        filter: grayscale(100%);
+
+                        .overlay{
+                            visibility: visible;
+                        }
+                    }
+                    
+                    .overlay{
+                        height: 300px;
+                        width: 90%;
+                        max-width: 400px;
+                        background-color: @lightGrey;
+                        border: 20px solid transparent;
+                        opacity: 0.7;
+                        padding: 6%;
+                        text-align: center;
+                        margin: 10.2%;
+                        visibility: hidden;
+
+            
+                        h3 {
+                            font-size: 2.8rem;
+                            margin: 5% 5% 0 5%;
+                        }
+            
+                        h4{
+                            font-size: 1.6rem;
+                            margin: 5%;
+                        }
+            
+                        p {
+                            line-height: 1.8;
+                            font-size: 1.3rem;
+                            text-align: left;
+                        }
+            
+                        .fa {
+                            font-size: 3rem;
+                            margin: 2% 10%;
+                            color: @primaryColor;
+
+                            &:hover {
+                                .animation(pulseText, 1.5s, infinite);
+                                }
+                        }
+                    }
+
+                    .profileImg {
+                        height: 80%;
+                        width: 90%;
+                        max-height: 300px;
+                        max-width: 400px;
+                        border: 20px solid @primaryColor;
+                        margin: 10%;
+                        object-fit: cover;
+                    }
+
+                }
+            }
+        
+    } //main
+
+} //body
