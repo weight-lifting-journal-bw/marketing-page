@@ -158,7 +158,7 @@ body header {
     width: 100%;
   }
 }
-body header button {
+body header .burgerBtn {
   visibility: hidden;
   position: absolute;
   top: 0px;
@@ -169,15 +169,15 @@ body header button {
   border: none;
 }
 @media (max-width: 1000px) {
-  body header button {
+  body header .burgerBtn {
     visibility: visible;
     font-size: 3rem;
   }
 }
-body header button:hover {
+body header .burgerBtn:hover {
   color: #94a4c2;
 }
-body header button:active {
+body header .burgerBtn:active {
   color: #94a4c2;
 }
 body header nav {
@@ -225,6 +225,7 @@ body .hamburgerMenu {
   opacity: 0.8;
   z-index: 2;
   overflow: hidden;
+  visibility: hidden;
 }
 body .hamburgerMenu a {
   color: #E1EBF6;
@@ -283,7 +284,7 @@ body main .portfolioBio {
 }
 body main .portfolioImg .profile,
 body main .portfolioBio .profile {
-  height: 10%;
+  height: 100%;
   width: calc(45% - 100px);
   max-width: 600px;
   min-width: 400px;
@@ -304,16 +305,15 @@ body main .portfolioBio .profile:hover .overlay {
 }
 body main .portfolioImg .profile .overlay,
 body main .portfolioBio .profile .overlay {
-  height: 80%;
+  height: 300px;
   width: 90%;
-  max-height: 300px;
   max-width: 400px;
   background-color: #C4C4C4;
   border: 20px solid transparent;
   opacity: 0.7;
-  padding: 5%;
+  padding: 6%;
   text-align: center;
-  margin: 10%;
+  margin: 10.2%;
   visibility: hidden;
 }
 body main .portfolioImg .profile .overlay h3,
