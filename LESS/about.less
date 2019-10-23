@@ -21,17 +21,14 @@ body {
             background-size: cover;
 
             .backgroundImg {
-                position: absolute;
+                .position(absolute, 0px, "", "", "");
                 z-index: -1;
-                top: 0px;
                 width: 100%;
                 max-height: 1500px;
                 object-fit: cover;
 
                 @media (max-width: 1500px) {
-                    position: fixed;
-                    top: 0px;
-                    left: 0px;
+                    .position(fixed, 0px, "", "", 0px);
                     height: 1100px;
                     z-index: -1;
                 }
@@ -47,10 +44,9 @@ body {
         }
 
         .portfolioImg, .portfolioBio{
-            display: flex;
+            .position(absolute, "", "", "", "");
+            .flexBox("", space-evenly, center);
             flex-wrap: wrap;
-            justify-content: space-evenly;
-            position: absolute;
             width: 100%;
 
 
@@ -105,8 +101,13 @@ body {
                         font-size: 3rem;
                         margin: 2% 10%;
                         color: @primaryColor;
+
+                        &:hover {
+                            .animation(pulseText, 1.5s, infinite);
+                            }
                     }
                 }
+
                 .profileImg {
                     height: 80%;
                     width: 90%;

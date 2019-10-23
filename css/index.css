@@ -135,6 +135,11 @@ table {
 html {
   font-size: 62.5%;
 }
+@media (max-width: 500px) {
+  html {
+    font-size: 35%;
+  }
+}
 html,
 body {
   font-family: "Roboto", "Open Sans";
@@ -205,6 +210,11 @@ header nav a {
   color: #323F58;
   font-size: 2rem;
 }
+header nav a:hover {
+  animation-name: pulseText;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
 @media (max-width: 1000px) {
   header nav a {
     display: none;
@@ -223,6 +233,9 @@ header nav a {
   .logoHeader {
     height: 70%;
     position: absolute;
+    top: "";
+    right: "";
+    bottom: "";
     left: 45%;
   }
 }
@@ -233,6 +246,8 @@ header nav a {
   font-size: 1rem;
   position: absolute;
   top: 38px;
+  right: "";
+  bottom: "";
   left: 55px;
   text-align: left;
   line-height: 2;
@@ -246,6 +261,11 @@ header nav a {
   color: #E1EBF6;
   text-decoration: none;
   font-size: 2rem;
+}
+.hamburgerMenu a:hover {
+  animation-name: pulseText;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
 body {
   width: 100vw;
@@ -272,8 +292,11 @@ body main .container {
 }
 body main .container .backgroundImg {
   position: absolute;
-  z-index: -1;
   top: 0px;
+  right: "";
+  bottom: "";
+  left: "";
+  z-index: -1;
   width: 100%;
   max-height: 1500px;
   object-fit: cover;
@@ -282,6 +305,8 @@ body main .container .backgroundImg {
   body main .container .backgroundImg {
     position: fixed;
     top: 0px;
+    right: "";
+    bottom: "";
     left: 0px;
     height: 1100px;
     z-index: -1;
@@ -294,10 +319,16 @@ body main h1 {
 }
 body main .portfolioImg,
 body main .portfolioBio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
   position: absolute;
+  top: "";
+  right: "";
+  bottom: "";
+  left: "";
+  display: flex;
+  flex-direction: "";
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 body main .portfolioImg .profile,
@@ -355,6 +386,12 @@ body main .portfolioBio .profile .overlay .fa {
   font-size: 3rem;
   margin: 2% 10%;
   color: #323F58;
+}
+body main .portfolioImg .profile .overlay .fa:hover,
+body main .portfolioBio .profile .overlay .fa:hover {
+  animation-name: pulseText;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
 body main .portfolioImg .profile .profileImg,
 body main .portfolioBio .profile .profileImg {
