@@ -567,30 +567,30 @@ header nav a:hover {
 #productDescriptionPage .descriptionBox .signUpButton:active {
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
-body {
+.bodyAbout {
   width: 100vw;
 }
-body main {
+.bodyAbout .mainAbout {
   padding: 12% 0 0%;
   height: 100vh;
   width: 100%;
 }
 @media (max-width: 800px) {
-  body main {
+  .bodyAbout .mainAbout {
     height: 210vh;
   }
 }
 @media (max-width: 1000px) {
-  body main {
+  .bodyAbout .mainAbout {
     padding-top: 20%;
     width: 100%;
   }
 }
-body main .container {
+.bodyAbout .mainAbout .containerAbout {
   height: inherit;
   background-size: cover;
 }
-body main .container .backgroundImg {
+.bodyAbout .mainAbout .containerAbout .backgroundImg {
   position: absolute;
   top: 0px;
   right: "";
@@ -602,7 +602,7 @@ body main .container .backgroundImg {
   object-fit: cover;
 }
 @media (max-width: 1500px) {
-  body main .container .backgroundImg {
+  .bodyAbout .mainAbout .containerAbout .backgroundImg {
     position: fixed;
     top: 0px;
     right: "";
@@ -612,13 +612,13 @@ body main .container .backgroundImg {
     z-index: -1;
   }
 }
-body main h1 {
+.bodyAbout .mainAbout h1 {
   color: #323F58;
   text-align: center;
   font-size: 5rem;
 }
-body main .portfolioImg,
-body main .portfolioBio {
+.bodyAbout .mainAbout .portfolioImg,
+.bodyAbout .mainAbout .portfolioBio {
   position: absolute;
   top: "";
   right: "";
@@ -631,29 +631,29 @@ body main .portfolioBio {
   flex-wrap: wrap;
   width: 100%;
 }
-body main .portfolioImg .profile,
-body main .portfolioBio .profile {
+.bodyAbout .mainAbout .portfolioImg .profile,
+.bodyAbout .mainAbout .portfolioBio .profile {
   height: 100%;
   width: calc(45% - 100px);
   max-width: 600px;
   min-width: 400px;
 }
 @media (max-width: 1000px) {
-  body main .portfolioImg .profile,
-  body main .portfolioBio .profile {
+  .bodyAbout .mainAbout .portfolioImg .profile,
+  .bodyAbout .mainAbout .portfolioBio .profile {
     width: calc(50% - 100px);
   }
 }
-body main .portfolioImg .profile:hover,
-body main .portfolioBio .profile:hover {
+.bodyAbout .mainAbout .portfolioImg .profile:hover,
+.bodyAbout .mainAbout .portfolioBio .profile:hover {
   filter: grayscale(100%);
 }
-body main .portfolioImg .profile:hover .overlay,
-body main .portfolioBio .profile:hover .overlay {
+.bodyAbout .mainAbout .portfolioImg .profile:hover .overlay,
+.bodyAbout .mainAbout .portfolioBio .profile:hover .overlay {
   visibility: visible;
 }
-body main .portfolioImg .profile .overlay,
-body main .portfolioBio .profile .overlay {
+.bodyAbout .mainAbout .portfolioImg .profile .overlay,
+.bodyAbout .mainAbout .portfolioBio .profile .overlay {
   height: 300px;
   width: 90%;
   max-width: 400px;
@@ -665,36 +665,36 @@ body main .portfolioBio .profile .overlay {
   margin: 10.2%;
   visibility: hidden;
 }
-body main .portfolioImg .profile .overlay h3,
-body main .portfolioBio .profile .overlay h3 {
+.bodyAbout .mainAbout .portfolioImg .profile .overlay h3,
+.bodyAbout .mainAbout .portfolioBio .profile .overlay h3 {
   font-size: 2.8rem;
   margin: 5% 5% 0 5%;
 }
-body main .portfolioImg .profile .overlay h4,
-body main .portfolioBio .profile .overlay h4 {
+.bodyAbout .mainAbout .portfolioImg .profile .overlay h4,
+.bodyAbout .mainAbout .portfolioBio .profile .overlay h4 {
   font-size: 1.6rem;
   margin: 5%;
 }
-body main .portfolioImg .profile .overlay p,
-body main .portfolioBio .profile .overlay p {
+.bodyAbout .mainAbout .portfolioImg .profile .overlay p,
+.bodyAbout .mainAbout .portfolioBio .profile .overlay p {
   line-height: 1.8;
   font-size: 1.3rem;
   text-align: left;
 }
-body main .portfolioImg .profile .overlay .fa,
-body main .portfolioBio .profile .overlay .fa {
+.bodyAbout .mainAbout .portfolioImg .profile .overlay .fa,
+.bodyAbout .mainAbout .portfolioBio .profile .overlay .fa {
   font-size: 3rem;
   margin: 2% 10%;
   color: #323F58;
 }
-body main .portfolioImg .profile .overlay .fa:hover,
-body main .portfolioBio .profile .overlay .fa:hover {
+.bodyAbout .mainAbout .portfolioImg .profile .overlay .fa:hover,
+.bodyAbout .mainAbout .portfolioBio .profile .overlay .fa:hover {
   animation-name: pulseText;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
-body main .portfolioImg .profile .profileImg,
-body main .portfolioBio .profile .profileImg {
+.bodyAbout .mainAbout .portfolioImg .profile .profileImg,
+.bodyAbout .mainAbout .portfolioBio .profile .profileImg {
   height: 80%;
   width: 90%;
   max-height: 300px;
