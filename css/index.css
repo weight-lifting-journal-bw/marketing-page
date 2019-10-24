@@ -252,10 +252,6 @@ header {
   width: 100%;
   background-color: #E1EBF6;
   position: fixed;
-  top: 0px;
-  right: "";
-  bottom: "";
-  left: 0px;
   z-index: 1;
 }
 @media (max-width: 1000px) {
@@ -299,27 +295,17 @@ header nav a:hover {
   position: absolute;
   top: 8px;
   right: 8px;
-  bottom: "";
-  left: "";
 }
 @media (max-width: 1000px) {
   .logoHeader {
     height: 70%;
-    position: absolute;
-    top: "";
-    right: "";
-    bottom: "";
-    left: 45%;
+    left: calc(50% - 48px);
   }
 }
 @media (max-width: 500px) {
   .logoHeader {
     height: 80%;
-    position: absolute;
-    top: "";
-    right: "";
-    bottom: "";
-    left: 33%;
+    left: calc(50% - 38.5px);
   }
 }
 .hamburgerMenu {
@@ -353,7 +339,7 @@ header nav a:hover {
   position: fixed;
   top: 0px;
   left: 0px;
-  margin: 20px;
+  margin: 10px;
   color: #323F58;
   background-color: transparent;
   font-size: 3rem;
@@ -591,26 +577,12 @@ header nav a:hover {
   background-size: cover;
 }
 .bodyAbout .mainAbout .containerAbout .backgroundImg {
-  position: absolute;
+  position: fixed;
   top: 0px;
-  right: "";
-  bottom: "";
-  left: "";
   z-index: -1;
   width: 100%;
-  max-height: 1500px;
+  height: 100%;
   object-fit: cover;
-}
-@media (max-width: 1500px) {
-  .bodyAbout .mainAbout .containerAbout .backgroundImg {
-    position: fixed;
-    top: 0px;
-    right: "";
-    bottom: "";
-    left: 0px;
-    height: 1100px;
-    z-index: -1;
-  }
 }
 .bodyAbout .mainAbout h1 {
   color: #323F58;
@@ -620,10 +592,6 @@ header nav a:hover {
 .bodyAbout .mainAbout .portfolioImg,
 .bodyAbout .mainAbout .portfolioBio {
   position: absolute;
-  top: "";
-  right: "";
-  bottom: "";
-  left: "";
   display: flex;
   flex-direction: "";
   justify-content: space-evenly;
