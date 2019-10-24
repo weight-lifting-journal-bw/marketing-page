@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -128,120 +135,315 @@ table {
 html {
   font-size: 62.5%;
 }
+@media (max-width: 500px) {
+  html {
+    font-size: 35%;
+  }
+}
 html,
 body {
   font-family: "Roboto", "Open Sans";
+  overflow-x: hidden;
 }
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+@keyframes pulseText {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-body {
-  font-family: "Roboto";
-  font-weight: 500;
-  width: 100vw;
-}
-body header {
+header {
   width: 100%;
-  height: 10%;
   background-color: #E1EBF6;
   position: fixed;
   top: 0px;
+  right: "";
+  bottom: "";
   left: 0px;
   z-index: 1;
 }
-body header nav {
-  width: 50%;
-  margin: 4% auto;
-  display: flex;
-  justify-content: space-evenly;
+@media (max-width: 1000px) {
+  header {
+    text-align: center;
+    height: 10%;
+    width: 100%;
+  }
 }
-body header nav a {
+@media (max-width: 500px) {
+  header {
+    height: 7%;
+  }
+}
+header .burgerBtn {
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  right: "";
+  bottom: "";
+  left: 0px;
+  margin: 5% 5%;
+  color: #323F58;
+  background-color: transparent;
+  border: none;
+}
+@media (max-width: 1000px) {
+  header .burgerBtn {
+    visibility: visible;
+    font-size: 4rem;
+  }
+}
+@media (max-width: 500px) {
+  header .burgerBtn {
+    font-size: 5rem;
+  }
+}
+header .burgerBtn:hover {
+  color: #94a4c2;
+}
+header .burgerBtn:active {
+  color: #94a4c2;
+}
+header nav {
+  width: 50%;
+  margin: 2% auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header nav a {
   text-decoration: none;
   color: #323F58;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
-body header .logoHeader {
-  height: 95%;
+header nav a:hover {
+  animation-name: pulseText;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@media (max-width: 1000px) {
+  header nav a {
+    display: none;
+  }
+}
+.logoHeader {
+  height: 80%;
   width: auto;
   position: absolute;
   top: 8px;
   right: 8px;
+  bottom: "";
+  left: "";
+}
+@media (max-width: 1000px) {
+  .logoHeader {
+    height: 70%;
+    position: absolute;
+    top: "";
+    right: "";
+    bottom: "";
+    left: 45%;
+  }
+}
+@media (max-width: 500px) {
+  .logoHeader {
+    height: 80%;
+    position: absolute;
+    top: "";
+    right: "";
+    bottom: "";
+    left: 33%;
+  }
+}
+.hamburgerMenu {
+  width: 25%;
+  display: none;
+  flex-direction: column;
+  font-size: 1rem;
+  position: absolute;
+  top: 58px;
+  right: "";
+  bottom: "";
+  left: 0px;
+  text-align: left;
+  line-height: 2;
+  padding: 20px 25px;
+  background-color: #E1EBF6;
+  opacity: 0.8;
+  z-index: 2;
+  position: fixed;
+}
+@media (max-width: 1000px) {
+  .hamburgerMenu {
+    position: absolute;
+    top: 100px;
+    right: "";
+    bottom: "";
+    left: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .hamburgerMenu {
+    background-color: #323F58;
+    position: absolute;
+    top: 50px;
+    right: "";
+    bottom: "";
+    left: 0px;
+  }
+}
+.hamburgerMenu a {
+  color: #323F58;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.hamburgerMenu a:hover {
+  animation-name: pulseText;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@media (max-width: 500px) {
+  .hamburgerMenu a {
+    color: #E1EBF6;
+  }
+}
+body {
+  width: 100vw;
 }
 body main {
-  padding-top: 13%;
-  background-image: url("Images/dumbbells.jpeg");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  padding: 12% 0 0%;
+  height: 100vh;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  body main {
+    height: 210vh;
+  }
+}
+@media (max-width: 1000px) {
+  body main {
+    padding-top: 20%;
+    width: 100%;
+  }
+}
+body main .container {
+  height: inherit;
+  background-size: cover;
+}
+body main .container .backgroundImg {
+  position: absolute;
+  top: 0px;
+  right: "";
+  bottom: "";
+  left: "";
+  z-index: -1;
+  width: 100%;
+  max-height: 1500px;
+  object-fit: cover;
+}
+@media (max-width: 1500px) {
+  body main .container .backgroundImg {
+    position: fixed;
+    top: 0px;
+    right: "";
+    bottom: "";
+    left: 0px;
+    height: 1100px;
+    z-index: -1;
+  }
 }
 body main h1 {
   color: #323F58;
   text-align: center;
   font-size: 5rem;
 }
-body main .portfolios {
+body main .portfolioImg,
+body main .portfolioBio {
+  position: absolute;
+  top: "";
+  right: "";
+  bottom: "";
+  left: "";
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: "";
   justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
-body main .portfolios .profile {
-  height: 10%;
-  width: calc(40% - 10px);
-  max-width: 500px;
+body main .portfolioImg .profile,
+body main .portfolioBio .profile {
+  height: 100%;
+  width: calc(45% - 100px);
+  max-width: 600px;
+  min-width: 400px;
 }
-body main .portfolios .profile .profileImg {
-  height: 90%;
-  width: 90%;
-  max-height: 400px;
-  max-width: 400px;
-  border: 20px solid #323F58;
-  margin: 10%;
-  object-fit: cover;
+@media (max-width: 1000px) {
+  body main .portfolioImg .profile,
+  body main .portfolioBio .profile {
+    width: calc(50% - 100px);
+  }
 }
-body main .portfolios .profile .profileImg:hover {
+body main .portfolioImg .profile:hover,
+body main .portfolioBio .profile:hover {
   filter: grayscale(100%);
 }
-body main .portfolios .profile .overlay {
-  display: none;
-  height: 35vh;
-  max-width: 20vw;
-  background-color: #C4C4C4;
+body main .portfolioImg .profile:hover .overlay,
+body main .portfolioBio .profile:hover .overlay {
+  visibility: visible;
+}
+body main .portfolioImg .profile .overlay,
+body main .portfolioBio .profile .overlay {
+  height: 300px;
+  width: 90%;
+  max-width: 400px;
+  background-color: #E1EBF6;
+  border: 20px solid transparent;
   opacity: 0.7;
-  padding: 30px;
-  position: relative;
-  bottom: 480px;
-  left: 80px;
+  padding: 6%;
   text-align: center;
+  margin: 10.2%;
+  visibility: hidden;
 }
-body main .portfolios .profile .overlay h3 {
-  font-size: 4rem;
-  margin: 20% 10% 0 10%;
+body main .portfolioImg .profile .overlay h3,
+body main .portfolioBio .profile .overlay h3 {
+  font-size: 2.8rem;
+  margin: 5% 5% 0 5%;
 }
-body main .portfolios .profile .overlay h4 {
-  font-size: 2rem;
-  margin: 10%;
+body main .portfolioImg .profile .overlay h4,
+body main .portfolioBio .profile .overlay h4 {
+  font-size: 1.6rem;
+  margin: 5%;
 }
-body main .portfolios .profile .overlay p {
+body main .portfolioImg .profile .overlay p,
+body main .portfolioBio .profile .overlay p {
   line-height: 1.8;
   font-size: 1.3rem;
   text-align: left;
 }
-body main .portfolios .profile .overlay .fa {
+body main .portfolioImg .profile .overlay .fa,
+body main .portfolioBio .profile .overlay .fa {
   font-size: 3rem;
-  margin: 5%;
+  margin: 2% 10%;
   color: #323F58;
 }
-footer {
-  position: relative;
-  bottom: -1px;
-  width: 100%;
-  height: 15rem;
-  background-color: #E1EBF6;
-  text-align: center;
+body main .portfolioImg .profile .overlay .fa:hover,
+body main .portfolioBio .profile .overlay .fa:hover {
+  animation-name: pulseText;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
-footer .logoFooter {
-  margin: 20px auto;
+body main .portfolioImg .profile .profileImg,
+body main .portfolioBio .profile .profileImg {
+  height: 80%;
+  width: 90%;
+  max-height: 300px;
+  max-width: 400px;
+  border: 20px solid #323F58;
+  margin: 10%;
+  object-fit: cover;
 }
