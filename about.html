@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script defer src="myApp.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/index.css" rel="stylesheet">
+    <title>Spotter</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <header>
+        <div class="burgerBtn"><i class="fa fa-bars"></i></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Programs</a>
+            <a href="about.html">About Us</a>
+            <a href="#">Sign In</a>
+        </nav>
+        <img class="logoHeader" src="Images/logo.png" alt="logo">
+    </header>
+    <div class="hamburgerMenu">
+        <a href="index.html">Home</a>
+        <a href="#">Programs</a>
+        <a href="about.html">About Us</a>
+        <a href="#">Sign In</a>
+    </div>
+    
+    <main>
+        <div class="container">
+            <img src="Images/dumbbells.jpeg" class="backgroundImg">
+        <h1>Meet the Team</h1>
+        <div class="portfolioImg">
+            <div class="portfolioAdetola profile">
+                <img class="profileImg" src="Images/Adetola Akere.jpg" alt="Adetola Akere">
+            </div>
+            <div class="portfolioDavid profile">
+                <img class="profileImg" src="Images/David Kuseh.png" alt="David Kuseh">
+            </div>
+            <div class="portfolioMaaruf profile">
+                <img class="profileImg" src="Images/Maaruf Dauda.jpg" alt="Maaruf Dauda">
+            </div>
+            <div class="portfolioSeb profile">
+                <img class="profileImg" src="Images/Sebastian Ojefors.png" alt="Sebastian Öjefors">
+            </div>
+            <div class="portfolioEmma profile">
+                <img class="profileImg" src="Images/Emma Andrews.jpg" alt="Emma Andrews">
+            </div>
+            <div class="portfolioKarim profile">
+                <img class="profileImg" src="Images/Karim Bertacche.png" alt="Karim Bertacche">
+            </div>
+        </div>
+        <div class="portfolioBio">
+            <div class="portfolioAdetola profile">
+                <div class="overlay overlayAdetola">
+                    <h3>Adetola Akere</h3>
+                    <h4>React Developer</h4>
+                    <p>Location: Lagos, Nigeria</p>
+                    <p>Fact: A tech enthusiast and a passionate football fan</p>
+                    <a href="#"><i class="fa fa-github "></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="portfolioDavid profile">
+                <div class="overlay overlayDavid">
+                    <h3>David Kuseh</h3>
+                    <h4>React Developer</h4>
+                    <p>Location: Accra, Ghana</p>
+                    <p>Fact: Avid sports fan. Also enjoy gaming.</p>
+                    <a href="https://github.com/DavidKuseh"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/daveGRU203"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="portfolioMaaruf profile">
+                <div class="overlay overlayMarruf">
+                    <h3>Maaruf Dauda</h3>
+                    <h4>React Developer</h4>
+                    <p>Location: ...</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="https://github.com/emkayDauda"><i class="fa fa-github"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="portfolioSeb profile">
+                <div class="overlay overlaySeb">
+                    <h3>Sebastian Öjefors</h3>
+                    <h4>UI Developer</h4>
+                    <p>Location: Visby, Sweden</p>
+                    <p>Fact: I have 8 siblings</p>
+                    <a href="https://github.com/Godnoken"><i class="fa fa-github"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="portfolioEmma profile">
+                <div class="overlay overlayEmma">
+                    <h3>Emma Andrews</h3>
+                    <h4>UI Developer</h4>
+                    <p>Location: Norwich, UK</p>
+                    <p>Bio: Perfectionist, Heavy Metal lover. I treat my dog like a human toddler.</p>
+                    <a href="https://github.com/ELAndrews"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/EmmaAndrews1990"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="portfolioKarim profile">
+                <div class="overlay overlayKarim">
+                    <h3>Karim Bertacche</h3>
+                    <h4>App Lead</h4>
+                    <p>Location: Novara, Italy</p>
+                    <p>Bio: Good Samaritan, washed-up athlete, especially gifted napper. I will go into survival mode if tickled.</p>
+                    <a href="https://github.com/KarimBertacche"><i class="fa fa-github"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+  </body>
+</html>
