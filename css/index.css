@@ -262,7 +262,6 @@ header {
   header {
     text-align: center;
     height: 10%;
-    width: 100%;
   }
 }
 @media (max-width: 500px) {
@@ -275,7 +274,7 @@ header nav {
   margin: 2% auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 header nav a {
@@ -296,30 +295,24 @@ header nav a:hover {
 .logoHeader {
   height: 80%;
   width: auto;
+  margin: 0px auto;
   position: absolute;
-  top: 8px;
-  right: 8px;
-  bottom: "";
-  left: "";
+  right: 5px;
+  top: 5px;
 }
 @media (max-width: 1000px) {
   .logoHeader {
     height: 70%;
-    position: absolute;
-    top: "";
-    right: "";
-    bottom: "";
-    left: 45%;
+    right: unset;
+    top: unset;
+    left: calc(50% - 24px);
   }
 }
 @media (max-width: 500px) {
   .logoHeader {
-    height: 80%;
-    position: absolute;
-    top: "";
-    right: "";
-    bottom: "";
-    left: 33%;
+    left: calc(50% - 24px);
+    right: unset;
+    top: unset;
   }
 }
 .hamburgerMenu {
@@ -634,9 +627,13 @@ header nav a:hover {
 .bodyAbout .mainAbout .portfolioImg .profile,
 .bodyAbout .mainAbout .portfolioBio .profile {
   height: 100%;
-  width: calc(45% - 100px);
+  width: calc(50% - 200px);
   max-width: 600px;
-  min-width: 400px;
+  min-width: 440px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 1000px) {
   .bodyAbout .mainAbout .portfolioImg .profile,
@@ -662,7 +659,7 @@ header nav a:hover {
   opacity: 0.7;
   padding: 6%;
   text-align: center;
-  margin: 10.2%;
+  margin: 10%;
   visibility: hidden;
 }
 .bodyAbout .mainAbout .portfolioImg .profile .overlay h3,
@@ -696,7 +693,7 @@ header nav a:hover {
 .bodyAbout .mainAbout .portfolioImg .profile .profileImg,
 .bodyAbout .mainAbout .portfolioBio .profile .profileImg {
   height: 80%;
-  width: 90%;
+  width: 80%;
   max-height: 300px;
   max-width: 400px;
   border: 20px solid #323F58;
