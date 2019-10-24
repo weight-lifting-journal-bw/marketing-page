@@ -40,7 +40,7 @@
 
     .burgerBtn {
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         top: 0px;
         left: 0px;
         margin: 20px;
@@ -59,11 +59,10 @@
         &:hover {
             color: lighten(@primaryColor, 40%);
         }
-
+      
         &:active {
             color: lighten(@primaryColor, 40%);
         }
-
     }
 
     .landingPageNavBar {
@@ -100,7 +99,7 @@
             }
 
             a {
-                .font(4.2rem, @primaryColor, bold);
+                .font(3.8rem, @primaryColor, bold);
 
                 @media @smallDesktop {
                     font-size: 3.0rem;
@@ -124,42 +123,3 @@
             }
         }
     }
-
-    .landingPageContent {
-        .flexBox(column, space-between, center);
-        height: 80%;
-
-        .phone img {
-            width: 225px;
-            filter: drop-shadow(-60px 35px 40px rgba(0, 0, 0, 0.8));
-
-            @media @phone {
-                display: none;
-            }
-        }
-
-        h1 {
-            .font(4.7rem, @primaryColor, bold);
-            text-shadow: -3px 3px 6px rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 75%;
-        }
-
-        .arrowButton img {
-            filter: @buttonShadow;
-            width: 100px;
-            position: absolute;
-            top: 83%;
-            left: calc(50% - 50px);
-
-            &:hover {
-                .animation(pulseText, 1.5s, infinite);
-            }
-
-            @media @phone {
-                width: 80px;
-                left: calc(50% - 40px);
-            }
-        }
-    }
-}

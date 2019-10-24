@@ -203,7 +203,7 @@ a {
 }
 .landingPageContainer .burgerBtn {
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   margin: 20px;
@@ -276,7 +276,7 @@ a {
   }
 }
 .landingPageContainer .landingPageNavBar .navigationBar a {
-  font-size: 4.2rem;
+  font-size: 3.8rem;
   color: #323F58;
   font-weight: bold;
 }
@@ -303,44 +303,44 @@ a {
   max-height: 85%;
   filter: drop-shadow(-3px 3px 10px rgba(253, 253, 253, 0.3));
 }
-.landingPageContainer .landingPageContent {
+.landingPageContent {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 80%;
 }
-.landingPageContainer .landingPageContent .phone img {
+.landingPageContent .phone img {
   width: 225px;
   filter: drop-shadow(-60px 35px 40px rgba(0, 0, 0, 0.8));
 }
 @media (max-width: 500px) {
-  .landingPageContainer .landingPageContent .phone img {
+  .landingPageContent .phone img {
     display: none;
   }
 }
-.landingPageContainer .landingPageContent h1 {
+.landingPageContent h1 {
   font-size: 4.7rem;
   color: #323F58;
   font-weight: bold;
-  text-shadow: -3px 3px 6px rgba(0, 0, 0, 0.5);
+  text-shadow: -3px 3px 6px rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 75%;
 }
-.landingPageContainer .landingPageContent .arrowButton img {
+.landingPageContent .arrowButton img {
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.75));
   width: 100px;
   position: absolute;
   top: 83%;
   left: calc(50% - 50px);
 }
-.landingPageContainer .landingPageContent .arrowButton img:hover {
+.landingPageContent .arrowButton img:hover {
   animation-name: pulseText;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
 @media (max-width: 500px) {
-  .landingPageContainer .landingPageContent .arrowButton img {
+  .landingPageContent .arrowButton img {
     width: 80px;
     left: calc(50% - 40px);
   }
@@ -414,7 +414,7 @@ a {
   }
 }
 #productDescriptionPage .descriptionBox {
-  background: rgba(196, 196, 196, 0.3);
+  background: rgba(19, 19, 19, 0.8);
   border: 10px solid #BFCBD7;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -427,39 +427,41 @@ a {
   text-shadow: 0px 1px 4px #000000;
 }
 #productDescriptionPage .descriptionBox h2 {
-  font-size: 5.6rem;
+  font-size: 7rem;
   color: #EFF4F8;
   font-weight: normal;
 }
 @media (max-width: 1000px) {
   #productDescriptionPage .descriptionBox h2 {
-    font-size: 4.5rem;
+    font-size: 5rem;
   }
 }
 @media (max-width: 500px) {
   #productDescriptionPage .descriptionBox h2 {
-    font-size: 4rem;
+    font-size: 5.3rem;
   }
 }
 #productDescriptionPage .descriptionBox p {
-  font-size: 2.6rem;
+  font-size: 4rem;
   color: #EFF4F8;
   font-weight: normal;
   width: 80%;
+  line-height: 6rem;
+  text-align: center;
 }
 @media (max-width: 1300px) {
   #productDescriptionPage .descriptionBox p {
-    font-size: 2.3rem;
+    font-size: 3rem;
   }
 }
 @media (max-width: 1000px) {
   #productDescriptionPage .descriptionBox p {
-    font-size: 1.7rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 500px) {
   #productDescriptionPage .descriptionBox p {
-    font-size: 1.7rem;
+    /* font-size: 1.7rem; */
   }
 }
 #productDescriptionPage .descriptionBox .signUpButton {
