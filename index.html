@@ -3,82 +3,78 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
   <link href="https://fonts.google.com/specimen/Roboto?selection.family=Open+Sans|Roboto:400,500" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
-  <link rel="apple-touch-icon" href="logo192.png" />
-  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script defer src="JS/hamburger.js"></script>
   <title>Spotter</title>
 </head>
 
 <body>
   <div id="container">
-    <header>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Programs</a>
-        <a href="#">About</a>
-        <a href="#">Sign In</a>
-      </nav>
-
-      <div>
-        <figure class="logo">
-          <img src="images/logo.png" alt="Spotter Logo">
-        </figure>
-      </div>
-    </header>
-
     <main>
-      <section class="landingPage">
-        <figure class="phone">
-          <img src="images/phone.png" alt="Spotter app displayed on phone">
-        </figure>
+      <div class="landingPageContainer">
+        <div class="burgerBtn"><i class="fa fa-bars"></i></div>
+        <div class="landingPageNavBar">
+          <div class="empty"></div>
+          <nav class="navigationBar">
+            <a href="#">Home</a>
+            <a href="#">Programs</a>
+            <a href="about.html">About Us</a>
+            <a href="#">Sign In</a>
+          </nav>
+          <figure class="logo">
+            <img src="images/logo.png" alt="Spotter Logo">
+          </figure>
+        </div>
+        <div class="hamburgerMenu">
+          <a href="#">Home</a>
+          <a href="#">Programs</a>
+          <a href="about.html">About Us</a>
+          <a href="#">Sign In</a>
+        </div>
+        <section class="landingPageContent">
+          <figure class="phone">
+            <img src="images/phone.png" alt="Spotter app displayed on phone">
+          </figure>
 
-        <h1>Workouts made easy</h1>
+          <h1>Workouts made easy</h1>
+
+          <figure class="arrowButton">
+            <a href="#productFillPage"><img src="images/arrow.png" alt="Click to scroll down"></a>
+          </figure>
+        </section>
+      </div>
+      <section id="productFillPage">
+        <h2 id="create">Create routine.</h2>
+        <h2 id="save">Click save.</h2>
+        <h2 id="forever">Use forever.</h2>
 
         <figure class="arrowButton">
-          <img src="images/arrow.png" alt="Click to scroll down">
+          <a href="#productDescriptionPage"><img src="images/arrow.png" alt="Click to scroll down"></a>
         </figure>
       </section>
-      <section class="productDescriptionPage">
-        <h2>Create routine.</h2>
-        <h2>Save.</h2>
-        <h2>Use forever.</h2>
+      <section id="productDescriptionPage">
+        <div class="descriptionBox">
+          <h2>What is Spotter?</h2>
 
-        <figure class="arrowButton">
-          <img src="images/arrow.png" alt="Click to scroll down">
-        </figure>
-      </section>
-      <section class="signUpPage">
-        <div class="signUpBox">
-          <h2>Sign up</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim, leo at viverra faucibus, velit
+            justo suscipit ipsum, ac fringilla ligula ipsum eu nibh. Vivamus pretium libero nisl, in dapibus leo
+            tristique vel. Morbi vitae ex a quam molestie viverra. Etiam tortor mauris, pellentesque eu nisi vel,
+            hendrerit venenatis tortor. Mauris pellentesque dui libero, at maximus mauris cursus vel. Cras nec ipsum
+            lacinia, fringilla magna quis, ultricies sem. Nam id suscipit nulla, nec eleifend dui. Pellentesque vel
+            ultricies lorem. Aliquam porttitor velit non bibendum molestie. Proin urna justo, lacinia sit amet
+            condimentum vitae, elementum vitae nunc. Sed vehicula ullamcorper odio, sit amet placerat ligula dictum et.
+            Phasellus dapibus dignissim massa at posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            Proin sit amet eleifend massa. Nulla dapibus enim nec libero egestas, in sollicitudin risus rhoncus. Nunc
+            nec enim massa.</p>
 
-          <div class="signUpTextBox">
-            <p>Email: </p>
-          </div>
-
-          <div class="signUpTextBox">
-            <p>Password: </p>
-          </div>
 
           <div class="signUpButton">
-            <p>Commit to be fit!</p>
+            <a href="#">
+              <p>Sign Up!</p>
+            </a>
           </div>
         </div>
       </section>

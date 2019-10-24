@@ -5,12 +5,17 @@
     align-items: @align;
 }
 
+.font(@size, @color, @weight) {
+    font-size: @size;
+    color: @color;
+    font-weight: @weight;
+}
+
 .animation (@name, @duration, @iteration) {
     animation-name: @name;
     animation-duration: @duration;
     animation-iteration-count: @iteration;
 }
-
 
 .position(@position, @top, @right, @bottom, @left) {
     position: @position;
