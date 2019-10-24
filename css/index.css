@@ -178,8 +178,7 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 20%;
-  padding-top: 35px;
+  height: 18%;
   mix-blend-mode: hard-light;
 }
 @media (max-width: 1000px) {
@@ -188,7 +187,7 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    mix-blend-mode: normal;
+    mix-blend-mode: hard-light;
   }
 }
 @media (max-width: 500px) {
@@ -364,7 +363,7 @@ header nav a:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 80%;
+  height: 82%;
 }
 .landingPageContent .phone img {
   width: 225px;
@@ -377,7 +376,7 @@ header nav a:hover {
 }
 .landingPageContent h1 {
   font-size: 4.7rem;
-  color: #323F58;
+  color: #EFF4F8;
   font-weight: bold;
   text-shadow: -3px 3px 6px rgba(0, 0, 0, 0.7);
   position: absolute;
