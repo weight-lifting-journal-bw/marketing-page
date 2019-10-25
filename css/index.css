@@ -341,6 +341,7 @@ header nav a:hover {
   color: #323F58;
   background-color: transparent;
   font-size: 3rem;
+  z-index: 1;
 }
 @media (max-width: 1000px) {
   .burgerBtn {
