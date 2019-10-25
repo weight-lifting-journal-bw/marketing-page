@@ -79,23 +79,39 @@
                     h3 {
                         font-size: 2.8rem;
                         margin: 5% 5% 0 5%;
+
+                        @media @phone {
+                            font-size: 5rem;
+                        }
                     }
         
                     h4{
                         font-size: 1.6rem;
                         margin: 5%;
+
+                        @media @phone {
+                            font-size: 3.5rem;
+                        }
                     }
         
                     p {
                         line-height: 1.8;
                         font-size: 1.3rem;
                         text-align: left;
+
+                        @media @phone {
+                            font-size: 2.4rem;
+                        }
                     }
         
                     .fa {
                         font-size: 3rem;
                         margin: 2% 10%;
                         color: @primaryColor;
+
+                        @media @phone {
+                            font-size: 5rem;
+                        }
 
                         &:hover {
                             .animation(pulseText, 1.5s, infinite);
