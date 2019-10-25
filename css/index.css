@@ -648,10 +648,22 @@ header nav a:hover {
   font-size: 2.8rem;
   margin: 5% 5% 0 5%;
 }
+@media (max-width: 500px) {
+  .bodyAbout .mainAbout .portfolioImg .profile .overlay h3,
+  .bodyAbout .mainAbout .portfolioBio .profile .overlay h3 {
+    font-size: 5rem;
+  }
+}
 .bodyAbout .mainAbout .portfolioImg .profile .overlay h4,
 .bodyAbout .mainAbout .portfolioBio .profile .overlay h4 {
   font-size: 1.6rem;
   margin: 5%;
+}
+@media (max-width: 500px) {
+  .bodyAbout .mainAbout .portfolioImg .profile .overlay h4,
+  .bodyAbout .mainAbout .portfolioBio .profile .overlay h4 {
+    font-size: 3.5rem;
+  }
 }
 .bodyAbout .mainAbout .portfolioImg .profile .overlay p,
 .bodyAbout .mainAbout .portfolioBio .profile .overlay p {
@@ -659,11 +671,23 @@ header nav a:hover {
   font-size: 1.3rem;
   text-align: left;
 }
+@media (max-width: 500px) {
+  .bodyAbout .mainAbout .portfolioImg .profile .overlay p,
+  .bodyAbout .mainAbout .portfolioBio .profile .overlay p {
+    font-size: 2.4rem;
+  }
+}
 .bodyAbout .mainAbout .portfolioImg .profile .overlay .fa,
 .bodyAbout .mainAbout .portfolioBio .profile .overlay .fa {
   font-size: 3rem;
   margin: 2% 10%;
   color: #323F58;
+}
+@media (max-width: 500px) {
+  .bodyAbout .mainAbout .portfolioImg .profile .overlay .fa,
+  .bodyAbout .mainAbout .portfolioBio .profile .overlay .fa {
+    font-size: 5rem;
+  }
 }
 .bodyAbout .mainAbout .portfolioImg .profile .overlay .fa:hover,
 .bodyAbout .mainAbout .portfolioBio .profile .overlay .fa:hover {
